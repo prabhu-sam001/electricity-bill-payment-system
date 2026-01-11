@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard | Electricity Bill Payment System</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <div class="nav-title">Electricity Bill Payment System</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/login">Logout</a>
+      </div>
+    </div>
+
+    <!-- Page Heading -->
+    <div class="welcome-section">
+      <h1>Admin Dashboard</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Generate Bill Section -->
+      <div class="content-block">
+        <h3>Generate Electricity Bill</h3>
+
+        <form method="POST" action="/admin/bill">
+          <label>Customer Email</label>
+          <input
+            type="email"
+            name="customerEmail"
+            placeholder="Enter customer email"
+            required
+          />
+
+          <label>Billing Month</label>
+          <input type="month" name="billingMonth" required />
+
+          <label>Units Consumed</label>
+          <input
+            type="number"
+            name="unitsConsumed"
+            placeholder="Enter units consumed"
+            required
+          />
+
+          <label>Rate per Unit</label>
+          <input
+            type="number"
+            name="ratePerUnit"
+            placeholder="Enter rate per unit"
+            required
+          />
+
+          <button type="submit" class="btn">Generate Bill</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Electricity Bill Payment System | Academic Project</p>
+    </div>
+  </body>
+</html>

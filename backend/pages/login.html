@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login | Electricity Bill Payment System</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Login Container -->
+    <div class="container">
+      <h2 class="page-title">Login</h2>
+
+      <!-- LOGIN FORM (NO JAVASCRIPT) -->
+      <div class="auth-box">
+        <form method="POST" action="/login">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter email" required />
+
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            required
+          />
+
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p class="info-text">
+          New user?
+          <a href="/signup">Create an account</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
