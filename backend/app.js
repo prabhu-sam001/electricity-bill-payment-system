@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/css", express.static(path.join(__dirname, "..", "css")));
+app.use("/css", express.static(path.join(__dirname, "css")));
 app.use(express.static(path.join(__dirname, "pages")));
 
 /* HOME */
@@ -117,7 +117,11 @@ app.post("/login", async (req, res) => {
 
 /* ADMIN PAGE */
 app.get("/admin", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "admin.html"));
+  const path = require('path');
+
+res.sendFile(
+  path.join(__dirname, 'pages', 'signup.html')
+);
 });
 
 /* USER PAGE – VIEW & PAY BILLS */
