@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const connectDB = require("./config/db");
-
 const User = require("./models/User");
 const Bill = require("./models/Bill");
 
@@ -29,7 +28,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "signup.html"));
+  res.sendFile(path.join(__dirname, "pages", "signUp.html"));
 });
 
 app.post("/signup", async (req, res) => {
